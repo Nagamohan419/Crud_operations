@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>UNH - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+     
+   
+    input[type=text],
+    input[type=password] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    input{
+      font-size: inherit;
+  }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 15%;
+    }
+    /* set a hover effect for the button*/
+      
+    input[type=submit]:hover {
+        opacity: 0.8;
+    }
+
+    img.avatar {
+      image-rendering: auto;
+      
+      
+      width:15%;
+      border-radius: 50%;
+      filter: contrast(200%);
+      background-color: rgba(189, 219, 247, 0.267);
+      
+      
+
+  }
+   
+
+    
+  </style>
+  
+  <body style ="background:url(https://sn3302files.storage.live.com/y4meaA7TQjzpyJYvuvwnJ9F3FERo-ST22qYtZ68t3v0tbunAygIyCt3YMYW5bKLKUeoBAeAWM2TcsCK6rqYwhHjMkA7KiPx2g9u5mK1AqT1YqjAJ1IrDw_KRvaQasPF2_zpyruuea-KrIkPTAeimQeLwLf-xgdwdx0sddxJAx29luZIC5uLWVIIUuYt5tOhb3Ze8tE7kUBMbOG5ZfPylLa_c_MMyKpJl2w1ohzWwi4FmlA?encodeFailures=1&width=1046&height=523);background-size:100%;opacity: 2;background-color: rgb(230, 194, 173);">
+    
+    <div class="container" align="center" >
+        
+        
+        <div class="bg-img">
+            <h1><font size="6"
+              face="verdana"
+              color="yellow"
+              >
+              University of New Haven Student Contacts
+            </font></h1>
+            <div><img src=
+      "https://sn3302files.storage.live.com/y4mjkG5U4-1UdnN6ikfEeLuUXbQEz73ddSe7HYSTwcAjsib5pR5ic4IE1NRV59xnozApXqdPYwaAQnGlw7p62XnNGIEtNGmenRcxvE0_y0hpjHwWtsWq3Dro1kUu_vxA_JakZHKt96JlQ1C2YVxXKEDexftweTyyHVIlbVDY9PN0YLpbdE6DdbVj5TY4LsfhjETaoxeKyR4-um-T_glTLy8w3TR7e4JCR5YaUESXkMobs8?encodeFailures=1&width=316&height=316" alt="Avatar" class="avatar"></div>
+      
+      <br>
+      
+      
+      <form  align ="center" action="" method="post">
+        
+        
+        <b>  <font size="6"
+            face="verdana"
+            color="pink">
+            Username
+          </font></b>
+       
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}" ><br />
+          <b><font size="6"
+            face="verdana"
+            color="pink">
+            Password
+          </font></b>
+         <input  type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}" ><br />
+        
+        
+          <input class="btn btn-default" type="submit" value="Login" align="center">
+        
+      </form>
+      {% if error %}
+      <font color="red">
+        <p class="error"><strong>Error:</strong> {{ error }}
+        </font></p>
+      {% endif %}
+        
+        
+    </div>
+  </body>
+</html>
